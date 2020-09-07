@@ -149,6 +149,22 @@
     return false;
   });
 
+  // Back to top button gray
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 100) {
+      $('.back-to-top-gray').fadeIn('slow');
+    } else {
+      $('.back-to-top-gray').fadeOut('slow');
+    }
+  });
+
+  $('.back-to-top-gray').click(function() {
+    $('html, body').animate({
+      scrollTop: 0
+    }, 1500, 'easeInOutExpo');
+    return false;
+  });
+
   // jQuery counterUp
   $('[data-toggle="counter-up"]').counterUp({
     delay: 10,
