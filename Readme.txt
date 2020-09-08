@@ -1,3 +1,5 @@
+Main page for smarttechnologiespr.com
+
 Thanks for downloading this template!
 
 Template Name: Knight
