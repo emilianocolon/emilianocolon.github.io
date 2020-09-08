@@ -158,7 +158,10 @@
         error_msg += data.responseText;
       }
       this_form.find('.loading').slideUp();
-      this_form.find('.error-message').slideDown().html(error_msg);
+      this_form.find('.sent-message').slideDown(); // TODO DANGEROUS REMOVE IF NOT USING FORMSPREE
+      // Changing js code since GitHub pages policy will not allow the cross-reference and I will get an error message
+      // I still get the message on formspree :)
+      // this_form.find('.error-message').slideDown().html(error_msg);
     });
   }
 
