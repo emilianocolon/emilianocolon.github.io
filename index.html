@@ -700,8 +700,6 @@
                 <a href="#contact" class="btn-buy">Solicitar Ahora</a>
               </div> -->
               <div class="btn-wrap">
-                <div id="paypal-button-container-2"></div>
-                <script src="https://www.paypal.com/sdk/js?client-id=AdmsGfwHr919gb3e61Nl6QrBTSYCT9GhDYuumfxhHwCtMMJB7oxYM2niztu5QdamHr9iqqh8UBkbNOFZ&vault=true" data-sdk-integration-source="button-factory"></script>
                 <script>
                   paypal.Buttons({
                       style: {
@@ -718,7 +716,7 @@
                       onApprove: function(data, actions) {
                         alert(data.subscriptionID);
                       }
-                  }).render('#paypal-button-container-2');
+                  }).render('#paypal-button-container');
                 </script>
               </div>
             </div>
