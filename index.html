@@ -700,6 +700,7 @@
                 <a href="#contact" class="btn-buy">Solicitar Ahora</a>
               </div> -->
               <div class="btn-wrap">
+                <div id="paypal-button-container-2"></div>
                 <script>
                   paypal.Buttons({
                       style: {
@@ -716,7 +717,7 @@
                       onApprove: function(data, actions) {
                         alert(data.subscriptionID);
                       }
-                  }).render('#paypal-button-container');
+                  }).render('#paypal-button-container-2');
                 </script>
               </div>
             </div>
