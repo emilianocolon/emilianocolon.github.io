@@ -63,7 +63,7 @@
               <li><a href="#about">About Us</a></li>
               <li><a href="#team">Team</a></li>
 
-              <li class="drop-down"><a href="#">Deep Drop</a>
+              <!-- <li class="drop-down"><a href="#">Deep Drop</a>
                 <ul>
                   <li><a href="#">Deep Drop Down 1</a></li>
                   <li><a href="#">Deep Drop Down 2</a></li>
@@ -71,7 +71,7 @@
                   <li><a href="#">Deep Drop Down 4</a></li>
                   <li><a href="#">Deep Drop Down 5</a></li>
                 </ul>
-              </li>
+              </li> -->
             </ul>
           </li>
           <li><a href="#services">Services</a></li>
@@ -659,6 +659,27 @@
               <div class="btn-wrap">
                 <a href="#contact" class="btn-buy">Solicitar Ahora</a>
               </div>
+              <div id="paypal-button-container"></div>
+              <script src="https://www.paypal.com/sdk/js?client-id=AdmsGfwHr919gb3e61Nl6QrBTSYCT9GhDYuumfxhHwCtMMJB7oxYM2niztu5QdamHr9iqqh8UBkbNOFZ&vault=true" data-sdk-integration-source="button-factory"></script>
+              <script>
+                paypal.Buttons({
+                    style: {
+                        shape: 'rect',
+                        color: 'blue',
+                        layout: 'vertical',
+                        label: 'paypal'
+                    },
+                    createSubscription: function(data, actions) {
+                      return actions.subscription.create({
+                        'plan_id': 'P-13315206MM2939436L5PPL6Y'
+                      });
+                    },
+                    onApprove: function(data, actions) {
+                      alert(data.subscriptionID);
+                    }
+                }).render('#paypal-button-container');
+              </script>
+
             </div>
           </div>
 
